@@ -1,0 +1,70 @@
+Commands for 1.Git-HOL.dox
+
+git config --global user.name
+git config --global user.email
+cd Week_7
+mkdir GitDemo
+cd GitDemo
+git init
+New-Item welcome.txt -ItemType File
+Set-Content welcome.txt "Welcome to Git"
+git status
+git add welcome.txt
+git commit -m "Initial commit"
+git log --oneline
+git remote add origin https://github.com/<vinshithalambu>/<Cognizant-DigitalNurture>.git
+git remote -v
+git branch -M main
+git push -u origin main
+
+Commands for 2.Git-HOL.dox
+
+New-Item sample.log -ItemType File
+New-Item log -ItemType Directory
+New-Item .gitignore -ItemType File
+git status
+git add .gitignore
+git commit -m "Added .gitignore to ignore log files and log folder"
+git push origin main
+
+Commands for 3.Git-HOL.dox
+
+git branch GitNewBranch
+git branch -a
+git checkout GitNewBranch
+New-Item BranchFile.txt -ItemType File
+Add-Content BranchFile.txt "This file was created in GitNewBranch."
+git status
+git add BranchFile.txt
+git commit -m "Added BranchFile in GitNewBranch"
+git checkout main
+git mv BranchFile.txt Week_7/
+git commit -m "Move BranchFile to Week_7"
+git push origin main
+
+Commands for 4.Git-HOL.dox
+
+git branch GitWork
+git checkout GitWork
+New-Item hello.xml -ItemType File
+Set-Content hello.xml "<message>Hello from GitWork Branch</message>"
+git add hello.xml
+git commit -m "Added hello.xml in GitWork branch"
+git checkout main
+New-Item hello.xml -ItemType File
+Set-Content hello.xml "<message>Hello from Main Branch</message>"
+git add hello.xml
+git commit -m "Added hello.xml in main branch"
+git merge GitWork
+git add hello.xml
+git commit -m "Resolved merge conflict in hello.xml"
+git push origin main
+git log --oneline --graph --all
+
+Commands for 5.Git-HOL.dox
+
+git status
+git branch -a
+git pull origin main
+git push origin main
+git log --oneline --graph --all
